@@ -127,7 +127,7 @@ function initSignInOutBehavior() {
             // 阻止未登录访问 不允许访问的页面
             if (!flag) {
                 a.addEventListener("click", function () {
-                    if (confirm("登陆后可访问，您确定要登录吗？")) {
+                    if (confirm("Are you sure to log in?")) {
                         window.location.href = "login.html";
                     }
                     //阻止a标签的默认事件
@@ -182,7 +182,7 @@ function searchBtnClick(obj, evt) {
 
 
 function searchBtnSubmit() {
-    alert('搜索功能还没写好！');
+    alert('No Search');
 }
 
 function initScrollToTop() {

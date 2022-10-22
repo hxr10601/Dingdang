@@ -144,33 +144,33 @@ function getStringCanvas(string) {
         ele_username.onfocus = function () {
             this.placeholder = "";
             ele_usernameError.style.color = "#FF8D1B";
-            ele_usernameError.innerHTML = "✎ 用户名：";
+            ele_usernameError.innerHTML = "✎ username:";
         };
 
         ele_username.onblur = function () {
-            this.placeholder = "请输入您的用户名";
+            this.placeholder = "please input username";
             ele_usernameError.innerHTML = ""
         };
 
         ele_password.onfocus = function () {
             this.placeholder = "";
             ele_passwordError.style.color = "#FF8D1B";
-            ele_passwordError.innerHTML = "✎ 密码：";
+            ele_passwordError.innerHTML = "✎ password:";
         };
 
         ele_password.onblur = function () {
-            this.placeholder = "请输入您的密码";
+            this.placeholder = "please input password";
             ele_passwordError.innerHTML = "";
         };
 
         ele_captcha.onfocus = function () {
             this.placeholder = "";
             ele_captchaError.style.color = "#FF8D1B";
-            ele_captchaError.innerHTML = "✎ 验证码：";
+            ele_captchaError.innerHTML = "✎ security code:";
         };
 
         ele_captcha.onblur = function () {
-            this.placeholder = "请输入验证码";
+            this.placeholder = "please input security code";
             ele_captchaError.innerHTML = "";
         };
     }
@@ -182,18 +182,18 @@ function getStringCanvas(string) {
         if (!!user[ele_username.value]) {
             if (user[ele_username.value] !== ele_password.value) {
                 ele_passwordError.style.color = "#F00";
-                ele_passwordError.innerHTML = "× 密码错误！";
+                ele_passwordError.innerHTML = "× wrong password!";
                 isSuccess = false;
             }
         } else {
             ele_usernameError.style.color = "#F00";
-            ele_usernameError.innerHTML = "× 用户名错误！";
+            ele_usernameError.innerHTML = "× wrong username!";
             isSuccess = false;
         }
 
         if (ele_captcha.value.toLowerCase() !== getSession("Captcha").toLowerCase()) {
             ele_captchaError.style.color = "#F00";
-            ele_captchaError.innerHTML = "× 验证码错误！";
+            ele_captchaError.innerHTML = "× wrong security code";
             isSuccess = false;
         }
 
